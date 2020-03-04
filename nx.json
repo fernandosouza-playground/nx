@@ -1,0 +1,28 @@
+{
+  "npmScope": "souza-io",
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "webpage": {
+      "tags": []
+    },
+    "webpage-e2e": {
+      "tags": [],
+      "implicitDependencies": ["webpage"]
+    },
+    "api": {
+      "tags": []
+    },
+    "api-interfaces": {
+      "tags": []
+    }
+  }
+}
