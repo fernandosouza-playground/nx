@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Message } from '@souza-io/api-interfaces';
+import { UiComponents } from '@souza-io/ui-components';
 
 export const App = () => {
   const [m, setMessage] = useState<Message>({ message: '' });
@@ -27,6 +28,7 @@ export const App = () => {
         </button>
       </div>
       <div>{m.message}</div>
+      <UiComponents />
     </>
   );
 };
