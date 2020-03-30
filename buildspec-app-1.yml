@@ -27,5 +27,6 @@ phases:
       - echo Build completed on `date`
 
 artifacts:
+  discard-paths: yes
   files:
     - dist/apps/webpage/**/*
