@@ -26,6 +26,13 @@
     },
     "ui-components": {
       "tags": []
+    },
+    "wepage2": {
+      "tags": []
+    },
+    "wepage2-e2e": {
+      "tags": [],
+      "implicitDependencies": ["wepage2"]
     }
   }
 }
