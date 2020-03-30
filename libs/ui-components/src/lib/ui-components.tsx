@@ -12,7 +12,7 @@ const StyledUiComponents = styled.div`
 export const UiComponents = (props: UiComponentsProps) => {
   return (
     <StyledUiComponents>
-      <h1>This is a deployment test</h1>
+      <h1>This is a deployment test 2</h1>
     </StyledUiComponents>
   );
 };
