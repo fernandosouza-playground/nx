@@ -18,7 +18,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - npm run nx build:production:website
+      - npm run nx build:production:webpage
     finally:
       - echo This always runs even if the install command fails
   post_build:
