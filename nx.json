@@ -16,7 +16,9 @@
     },
     "webpage-e2e": {
       "tags": [],
-      "implicitDependencies": ["webpage"]
+      "implicitDependencies": [
+        "webpage"
+      ]
     },
     "api": {
       "tags": []
@@ -27,12 +29,11 @@
     "ui-components": {
       "tags": []
     },
-    "wepage2": {
-      "tags": []
-    },
-    "wepage2-e2e": {
+    "webpage2-e2e": {
       "tags": [],
-      "implicitDependencies": ["wepage2"]
+      "implicitDependencies": [
+        "webpage2"
+      ]
     }
   }
 }

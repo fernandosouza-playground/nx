@@ -69,7 +69,10 @@
               "apps/webpage/tsconfig.app.json",
               "apps/webpage/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/webpage/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/webpage/**"
+            ]
           }
         },
         "test": {
@@ -105,8 +108,13 @@
           "options": {
             "linter": "eslint",
             "config": "apps/webpage-e2e/.eslintrc",
-            "tsConfig": ["apps/webpage-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/webpage-e2e/**"]
+            "tsConfig": [
+              "apps/webpage-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/webpage-e2e/**"
+            ]
           }
         }
       }
@@ -124,7 +132,9 @@
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "assets": [
+              "apps/api/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -155,7 +165,10 @@
               "apps/api/tsconfig.app.json",
               "apps/api/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/api/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/api/**"
+            ]
           }
         },
         "test": {
@@ -183,7 +196,10 @@
               "libs/api-interfaces/tsconfig.lib.json",
               "libs/api-interfaces/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/api-interfaces/**"
+            ]
           }
         },
         "test": {
@@ -211,7 +227,10 @@
               "libs/ui-components/tsconfig.lib.json",
               "libs/ui-components/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ui-components/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-components/**"
+            ]
           }
         },
         "test": {
@@ -224,23 +243,57 @@
         }
       }
     },
-    "wepage2": {
-      "root": "apps/wepage2",
-      "sourceRoot": "apps/wepage2/src",
+    "webpage2-e2e": {
+      "root": "apps/webpage2-e2e",
+      "sourceRoot": "apps/webpage2-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/webpage2-e2e/cypress.json",
+            "tsConfig": "apps/webpage2-e2e/tsconfig.e2e.json",
+            "devServerTarget": "webpage2:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "webpage2:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "apps/webpage2-e2e/.eslintrc",
+            "tsConfig": [
+              "apps/webpage2-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/webpage2-e2e/**"
+            ]
+          }
+        }
+      }
+    },
+    "webpage2": {
+      "root": "apps/webpage2",
+      "sourceRoot": "apps/webpage2/src",
       "projectType": "application",
       "schematics": {},
       "architect": {
         "build": {
           "builder": "@nrwl/web:build",
           "options": {
-            "outputPath": "dist/apps/wepage2",
-            "index": "apps/wepage2/src/index.html",
-            "main": "apps/wepage2/src/main.tsx",
-            "polyfills": "apps/wepage2/src/polyfills.ts",
-            "tsConfig": "apps/wepage2/tsconfig.app.json",
+            "outputPath": "dist/apps/webpage2",
+            "index": "apps/webpage2/src/index.html",
+            "main": "apps/webpage2/src/main.tsx",
+            "polyfills": "apps/webpage2/src/polyfills.ts",
+            "tsConfig": "apps/webpage2/tsconfig.app.json",
             "assets": [
-              "apps/wepage2/src/favicon.ico",
-              "apps/wepage2/src/assets"
+              "apps/webpage2/src/favicon.ico",
+              "apps/webpage2/src/assets"
             ],
             "styles": [],
             "scripts": [],
@@ -250,8 +303,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/wepage2/src/environments/environment.ts",
-                  "with": "apps/wepage2/src/environments/environment.prod.ts"
+                  "replace": "apps/webpage2/src/environments/environment.ts",
+                  "with": "apps/webpage2/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -274,11 +327,11 @@
         "serve": {
           "builder": "@nrwl/web:dev-server",
           "options": {
-            "buildTarget": "wepage2:build"
+            "buildTarget": "webpage2:build"
           },
           "configurations": {
             "production": {
-              "buildTarget": "wepage2:build:production"
+              "buildTarget": "webpage2:build:production"
             }
           }
         },
@@ -286,49 +339,23 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "apps/wepage2/.eslintrc",
+            "config": "apps/webpage2/.eslintrc",
             "tsConfig": [
-              "apps/wepage2/tsconfig.app.json",
-              "apps/wepage2/tsconfig.spec.json"
+              "apps/webpage2/tsconfig.app.json",
+              "apps/webpage2/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/wepage2/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/webpage2/**"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/wepage2/jest.config.js",
-            "tsConfig": "apps/wepage2/tsconfig.spec.json",
+            "jestConfig": "apps/webpage2/jest.config.js",
+            "tsConfig": "apps/webpage2/tsconfig.spec.json",
             "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "wepage2-e2e": {
-      "root": "apps/wepage2-e2e",
-      "sourceRoot": "apps/wepage2-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/wepage2-e2e/cypress.json",
-            "tsConfig": "apps/wepage2-e2e/tsconfig.e2e.json",
-            "devServerTarget": "wepage2:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "wepage2:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:lint",
-          "options": {
-            "linter": "eslint",
-            "config": "apps/wepage2-e2e/.eslintrc",
-            "tsConfig": ["apps/wepage2-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/wepage2-e2e/**"]
           }
         }
       }

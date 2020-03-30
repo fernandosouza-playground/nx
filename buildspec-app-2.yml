@@ -11,14 +11,14 @@ phases:
       - echo This always runs even if the update or install command fails 
   pre_build:
     commands:
-      - npm run nx run webpage:test
+      - npm run nx run webpage2:test
     finally:
       - echo This always runs even if the login command fails 
   build:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - npm run nx build:production:webpage
+      - npm run nx build webpage2 --prod
     finally:
       - echo This always runs even if the install command fails
   post_build:
