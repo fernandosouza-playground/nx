@@ -7,9 +7,7 @@ export interface AppHeaderProps {
   children: JSX.Element
 }
 
-const StyledAppHeader = styled.header`
-  color: pink;
-`;
+const StyledAppHeader = styled.header``;
 
 export const AppHeader = (props: AppHeaderProps) => {
   return (

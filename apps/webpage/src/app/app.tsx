@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledApp, AppHeader } from '@souza-io/ui-components';
+import { StyledApp, AppHeader, List } from '@souza-io/ui-components';
 
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
@@ -39,42 +39,44 @@ export const App = () => {
           </a>
         </div>
         <p>Here are some links to help you get started.</p>
-        <ul className="resources">
-          <li className="col-span-2">
-            <a
-              className="resource flex"
-              href="https://connect.nrwl.io/app/courses/nx-workspaces/intro"
-            >
-              Nx video course
+        <List className="resources">
+          <>
+            <li className="col-span-2">
+              <a
+                className="resource flex"
+                href="https://connect.nrwl.io/app/courses/nx-workspaces/intro"
+              >
+                Nx video course
             </a>
-          </li>
-          <li className="col-span-2">
-            <a
-              className="resource flex"
-              href="https://nx.dev/react/getting-started/what-is-nx"
-            >
-              Nx video tutorial
+            </li>
+            <li className="col-span-2">
+              <a
+                className="resource flex"
+                href="https://nx.dev/react/getting-started/what-is-nx"
+              >
+                Nx video tutorial
             </a>
-          </li>
-          <li className="col-span-2">
-            <a
-              className="resource flex"
-              href="https://nx.dev/react/tutorial/01-create-application"
-            >
-              Interactive tutorial
+            </li>
+            <li className="col-span-2">
+              <a
+                className="resource flex"
+                href="https://nx.dev/react/tutorial/01-create-application"
+              >
+                Interactive tutorial
             </a>
-          </li>
-          <li className="col-span-2">
-            <a className="resource flex" href="https://connect.nrwl.io/">
-              <img
-                height="36"
-                alt="Nrwl Connect"
-                src="https://connect.nrwl.io/assets/img/CONNECT_ColorIcon.png"
-              />
-              <span className="gutter-left">Nrwl Connect</span>
-            </a>
-          </li>
-        </ul>
+            </li>
+            <li className="col-span-2">
+              <a className="resource flex" href="https://connect.nrwl.io/">
+                <img
+                  height="36"
+                  alt="Nrwl Connect"
+                  src="https://connect.nrwl.io/assets/img/CONNECT_ColorIcon.png"
+                />
+                <span className="gutter-left">Nrwl Connect</span>
+              </a>
+            </li>
+          </>
+        </List>
         <h2>Next Steps</h2>
         <p>Here are some things you can do with Nx.</p>
         <details open>
