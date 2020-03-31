@@ -51,7 +51,7 @@ export const App = () => {
             </li>
             <li className="col-span-2">
               <a
-                className="resource flex"
+                className="resource flex "
                 href="https://nx.dev/react/getting-started/what-is-nx"
               >
                 Nx video tutorial
