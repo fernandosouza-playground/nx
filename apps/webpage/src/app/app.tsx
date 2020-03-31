@@ -18,7 +18,7 @@ export const App = () => {
       <AppHeader>
         <>
           <Logo width="75" height="75" />
-          <h1>Welcome to webpage2!</h1>
+          <h1>Welcome to webpage1!</h1>
         </>
       </AppHeader>
       <main>
