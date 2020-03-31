@@ -29,6 +29,9 @@
     "ui-components": {
       "tags": []
     },
+    "webpage2": {
+      "tags": []
+    },
     "webpage2-e2e": {
       "tags": [],
       "implicitDependencies": [
