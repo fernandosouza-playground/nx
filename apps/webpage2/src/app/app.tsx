@@ -38,7 +38,7 @@ export const App = () => {
             </div>
           </a>
         </div>
-        <p>Here are some links to help you get started.</p>
+        <p>Here are some links to help you get started. </p>
         <ul className="resources">
           <li className="col-span-2">
             <a
