@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 /* eslint-disable-next-line */
 export interface AppHeaderProps {
-  children: JSX.ElementChildrenAttribute
+  children: JSX.Element
 }
 
 const StyledAppHeader = styled.header`

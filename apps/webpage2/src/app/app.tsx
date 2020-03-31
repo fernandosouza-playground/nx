@@ -16,8 +16,10 @@ export const App = () => {
   return (
     <StyledApp>
       <AppHeader>
-        <Logo width="75" height="75" />
-        <h1>Welcome to webpage2!</h1>
+        <>
+          <Logo width="75" height="75" />
+          <h1>Welcome to webpage2!</h1>
+        </>
       </AppHeader>
       <main>
         <h2>Resources &amp; Tools</h2>
