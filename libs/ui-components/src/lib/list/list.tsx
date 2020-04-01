@@ -1,11 +1,8 @@
-import React from 'react';
+import React, { ReactHTML } from 'react';
 
 import styled from 'styled-components';
 
 /* eslint-disable-next-line */
-export interface ListProps {
-  children: JSX.Element
-}
 
 const StyledList = styled.ul`
   text-align: center;
@@ -16,7 +13,7 @@ const StyledList = styled.ul`
   grid-template-columns: 1fr 1fr;
 `;
 
-export const List = (props: ListProps) => {
+export const List: React.FC<any> = (props) => {
   return (
     <StyledList>
       {props.children}
