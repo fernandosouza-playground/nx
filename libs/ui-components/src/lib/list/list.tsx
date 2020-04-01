@@ -16,7 +16,7 @@ const StyledList = styled.ul`
 export const List: React.FC<any> = (props) => {
   return (
     <StyledList>
-      {props.children}
+      { props.children }
     </StyledList>
   );
 };
