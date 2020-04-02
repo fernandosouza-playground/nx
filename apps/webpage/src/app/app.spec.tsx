@@ -23,6 +23,6 @@ describe('App', () => {
       </BrowserRouter>
     );
 
-    expect(getByText('Welcome to webpage1!')).toBeTruthy();
+    expect(getByText('This is the wrong title')).toBeTruthy();
   });
 });
